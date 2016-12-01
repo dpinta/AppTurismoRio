@@ -1,7 +1,9 @@
-package com.riobamba.appturismorio;
+package com.riobamba.appturismorio.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.riobamba.appturismorio.R;
 
 public class menuPrincipal extends AppCompatActivity {
 
