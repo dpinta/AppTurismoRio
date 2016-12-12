@@ -9,9 +9,10 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.emedinaa.androidmvp.model.entity.User;
-import com.emedinaa.androidmvp.presenter.LoginPresenter;
-import com.emedinaa.androidmvp.view.LoginView;
+import com.riobamba.appturismorio.model.entity.User;
+import com.riobamba.appturismorio.presenter.LoginPresenter;
+import com.riobamba.appturismorio.view.LoginView;
+
 
 
 public class LoginActivity extends FormActivity implements LoginView{

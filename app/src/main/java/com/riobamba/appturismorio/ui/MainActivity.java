@@ -3,7 +3,7 @@ package com.riobamba.appturismorio.ui;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.emedinaa.androidmvp.model.entity.User;
+import com.riobamba.appturismorio.model.entity.User;
 
 import butterknife.Bind;
 
