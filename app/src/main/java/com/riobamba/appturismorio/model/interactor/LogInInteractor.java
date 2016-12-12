@@ -1,10 +1,11 @@
 package com.riobamba.appturismorio.model.interactor;
 
-import com.emedinaa.androidmvp.data.entity.request.LogInRaw;
-import com.emedinaa.androidmvp.data.entity.response.LoginResponse;
-import com.emedinaa.androidmvp.data.mapper.UserDataMapper;
-import com.emedinaa.androidmvp.data.rest.ApiClient;
-import com.emedinaa.androidmvp.model.entity.User;
+
+import com.riobamba.appturismorio.data.entity.request.LogInRaw;
+import com.riobamba.appturismorio.data.entity.response.LoginResponse;
+import com.riobamba.appturismorio.data.mapper.UserDataMapper;
+import com.riobamba.appturismorio.data.rest.ApiClient;
+import com.riobamba.appturismorio.model.entity.User;
 
 import retrofit.Callback;
 import retrofit.RetrofitError;

@@ -1,10 +1,10 @@
 package com.riobamba.appturismorio.presenter;
 
-import com.emedinaa.androidmvp.data.mapper.UserDataMapper;
-import com.emedinaa.androidmvp.model.entity.User;
-import com.emedinaa.androidmvp.model.interactor.LogInCallback;
-import com.emedinaa.androidmvp.model.interactor.LogInInteractor;
-import com.emedinaa.androidmvp.view.LoginView;
+import com.riobamba.appturismorio.data.mapper.UserDataMapper;
+import com.riobamba.appturismorio.model.entity.User;
+import com.riobamba.appturismorio.model.interactor.LogInCallback;
+import com.riobamba.appturismorio.model.interactor.LogInInteractor;
+import com.riobamba.appturismorio.view.LoginView;
 
 /**
  * Created by emedinaa on 21/08/15.
