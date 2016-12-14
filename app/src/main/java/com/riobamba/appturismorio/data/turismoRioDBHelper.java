@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class turismoRioDBHelper extends SQLiteOpenHelper {
 
     private static int version=1;
-    private static String DB_NAME="turismoRio";
+    private static String DB_NAME="turismoRio.db";
     private static SQLiteDatabase.CursorFactory factory=null;
 
     public turismoRioDBHelper(Context context) {
@@ -25,8 +25,8 @@ public class turismoRioDBHelper extends SQLiteOpenHelper {
      //   db.execSQL(" CREATE TABLE lugar (id_lugar SERIAL NOT NULL,nombre_lugar TEXT NOT NULL, direccion_lugar TEXT NOT NULL, descripcion_lugar TEXT NOT NULL, latitud_lugar TEXT NOT NULL, longitud_lugar TEXT NOT NULL, PRIMARY KEY (id_lugar)); ");
         //CREACION DE LA TABLA IMAGEN
       //  db.execSQL("CREATE TABLE imagenLugar (id_imagen_lugar serial NOT NULL, path_imagen TEXT NOT NULL, id_lugar SERIAL NOT NULL REFERENCES lugar(id_lugar), PRIMARY KEY(id_imagen_lugar) )");
-        db.execSQL("CREATE TABLE lugar (idLugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,nombreLugar TEXT NOT NULL, direccionLugar TEXT NOT NULL, descripcionLugar TEXT NOT NULL, latitud_lugar TEXT NOT NULL, longitudLugar TEXT NOT NULL)");
-        db.execSQL("CREATE TABLE imagenLugar (idImagenLugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pathImagen TEXT NOT NULL, idLugar INTEGER NOT NULL REFERENCES lugar(idLugar) )");
+        db.execSQL("CREATE TABLE lugar (idLugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,nombreLugar TEXT NOT NULL, direccionLugar TEXT NOT NULL, descripcionLugar TEXT NOT NULL, latitudLugar TEXT NOT NULL, longitudLugar TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE imagenLugar (idImagen INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pathImagen TEXT NOT NULL, idLugar INTEGER NOT NULL REFERENCES lugar(idLugar) )");
 
 
 

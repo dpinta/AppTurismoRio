@@ -8,11 +8,11 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by lllum on 13/12/2016.
  */
 
-public class operacionDB {
+public final class operacionDB {
 
     private static turismoRioDBHelper base;
-    private static operacionDB operacion;
-    private Context contexto;
+    private static operacionDB operacion= new operacionDB();
+   // private Context contexto;
 
 
 
@@ -22,13 +22,13 @@ public class operacionDB {
 
     }
 
-   /* public static operacionDB optenerInstancia(Context contexto) {
+    public static operacionDB optenerInstancia(Context contexto) {
         if (base == null) {
             base = new turismoRioDBHelper(contexto);
 
         }
         return operacion;
-    }*/
+    }
 
     // insetar informacion
 
@@ -36,7 +36,7 @@ public class operacionDB {
     {
         ContentValues valores= new ContentValues();
 
-        base = new turismoRioDBHelper(contexto);
+       // base = new turismoRioDBHelper(contexto);
         // db = base.getWritableDatabase();
         SQLiteDatabase db=base.getWritableDatabase();
 

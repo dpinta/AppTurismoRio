@@ -44,8 +44,9 @@ public class LoginActivity extends FormActivity implements LoginView{
         ui();
         //base = new turismoRioDBHelper(getBaseContext());
        // db = base.getWritableDatabase();
+        objOperaciones= operacionDB.optenerInstancia(getApplicationContext());
 
-        objOperaciones.insertarLugar(new modeloLugar(null,"san antonio","loma de quito","es una iglesia","-094954395","-987859"));
+        objOperaciones.insertarLugar(new modeloLugar("1","san antonio","loma de quito","es una iglesia","-094954395","-987859"));
 
 
 
