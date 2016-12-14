@@ -50,6 +50,20 @@ public class LoginActivity extends FormActivity implements LoginView{
         modeloLugar oLugar= new modeloLugar("1","san antonio","loma de quito","es una iglesia","-094954395","-987859");
         objOperaciones.insertarLugar(oLugar);
         objOperaciones.insertarImagen(new modeloImagen("1","imagen1", oLugar));
+        objOperaciones.insertarImagen(new modeloImagen("2","imagen2", oLugar));
+        objOperaciones.insertarImagen(new modeloImagen("3","imagen3", oLugar));
+
+        modeloLugar oLugar1= new modeloLugar("2","la concepción","calles juan de lavalle y primera constituyente","es una iglesia construida en el año 1920","-094954395","-987859");
+        objOperaciones.insertarLugar(oLugar1);
+        objOperaciones.insertarImagen(new modeloImagen("4","imagen4", oLugar1));
+        objOperaciones.insertarImagen(new modeloImagen("5","imagen5", oLugar1));
+        objOperaciones.insertarImagen(new modeloImagen("6","imagen6", oLugar1));
+
+        modeloLugar oLugar2= new modeloLugar("3","la concepción","calles juan de lavalle y primera constituyente","es una iglesia construida en el año 1920","-094954395","-987859");
+        objOperaciones.insertarLugar(oLugar2);
+        objOperaciones.insertarImagen(new modeloImagen("7","imagen7", oLugar2));
+        objOperaciones.insertarImagen(new modeloImagen("8","imagen8", oLugar2));
+        objOperaciones.insertarImagen(new modeloImagen("9","imagen9", oLugar2));
 
 
 
