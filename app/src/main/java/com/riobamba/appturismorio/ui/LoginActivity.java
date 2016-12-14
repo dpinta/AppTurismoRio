@@ -10,7 +10,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.riobamba.appturismorio.data.modeloLugar;
+import com.riobamba.appturismorio.model.modeloImagen;
+import com.riobamba.appturismorio.model.modeloLugar;
 import com.riobamba.appturismorio.data.operacionDB;
 import com.riobamba.appturismorio.data.turismoRioDBHelper;
 import com.riobamba.appturismorio.model.entity.User;
@@ -46,8 +47,9 @@ public class LoginActivity extends FormActivity implements LoginView{
        // db = base.getWritableDatabase();
         objOperaciones= operacionDB.optenerInstancia(getApplicationContext());
 
-        objOperaciones.insertarLugar(new modeloLugar("1","san antonio","loma de quito","es una iglesia","-094954395","-987859"));
-
+        modeloLugar oLugar= new modeloLugar("1","san antonio","loma de quito","es una iglesia","-094954395","-987859");
+        objOperaciones.insertarLugar(oLugar);
+        objOperaciones.insertarImagen(new modeloImagen("1","imagen1", oLugar));
 
 
 

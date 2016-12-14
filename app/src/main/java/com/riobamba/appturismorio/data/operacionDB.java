@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.riobamba.appturismorio.model.modeloImagen;
+import com.riobamba.appturismorio.model.modeloLugar;
+
 /**
  * Created by lllum on 13/12/2016.
  */
