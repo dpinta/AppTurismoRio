@@ -1,4 +1,4 @@
-package com.riobamba.appturismorio.data;
+package com.riobamba.appturismorio.model;
 
 /**
  * Created by lllum on 13/12/2016.
