@@ -29,8 +29,7 @@ public class MainActivity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        base = new turismoRioDBHelper(contexto);
-        db = base.getWritableDatabase();
+
         extras();
         injectView();
         ui();

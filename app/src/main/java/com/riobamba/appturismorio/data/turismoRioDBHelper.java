@@ -22,9 +22,11 @@ public class turismoRioDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //CREAACION DE LA TABLA LUGAR
-        db.execSQL("create table lugar (id_lugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,nombre_lugar TEXT NOT NULL, direccion_lugar TEXT NOT NULL, descripcion_lugar TEXT NOT NULL, latitud_lugar TEXT NOT NULL, longitud_lugar TEXT NOT NULL) ");
+     //   db.execSQL(" CREATE TABLE lugar (id_lugar SERIAL NOT NULL,nombre_lugar TEXT NOT NULL, direccion_lugar TEXT NOT NULL, descripcion_lugar TEXT NOT NULL, latitud_lugar TEXT NOT NULL, longitud_lugar TEXT NOT NULL, PRIMARY KEY (id_lugar)); ");
         //CREACION DE LA TABLA IMAGEN
-        db.execSQL("create table imagenLugar (id_imagen_lugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, path_imagen TEXT NOT NULL, id_lugar INTEGER NOT NULL REFERENCES lugar(id_lugar) )");
+      //  db.execSQL("CREATE TABLE imagenLugar (id_imagen_lugar serial NOT NULL, path_imagen TEXT NOT NULL, id_lugar SERIAL NOT NULL REFERENCES lugar(id_lugar), PRIMARY KEY(id_imagen_lugar) )");
+        db.execSQL("CREATE TABLE lugar (idLugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,nombreLugar TEXT NOT NULL, direccionLugar TEXT NOT NULL, descripcionLugar TEXT NOT NULL, latitud_lugar TEXT NOT NULL, longitudLugar TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE imagenLugar (idImagenLugar INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pathImagen TEXT NOT NULL, idLugar INTEGER NOT NULL REFERENCES lugar(idLugar) )");
 
 
 

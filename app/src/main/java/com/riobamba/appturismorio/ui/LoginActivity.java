@@ -1,6 +1,7 @@
 package com.riobamba.appturismorio.ui;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -9,6 +10,9 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.riobamba.appturismorio.data.modeloLugar;
+import com.riobamba.appturismorio.data.operacionDB;
+import com.riobamba.appturismorio.data.turismoRioDBHelper;
 import com.riobamba.appturismorio.model.entity.User;
 import com.riobamba.appturismorio.presenter.LoginPresenter;
 import com.riobamba.appturismorio.view.LoginView;
@@ -24,6 +28,12 @@ public class LoginActivity extends FormActivity implements LoginView{
     private String username, password;
     private LoginPresenter loginPresenter;
 
+    private  turismoRioDBHelper base;
+    private Context contexto;
+    private operacionDB objOperaciones;
+
+    private SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +42,19 @@ public class LoginActivity extends FormActivity implements LoginView{
         loginPresenter= new LoginPresenter();
         loginPresenter.addView(this);
         ui();
+        //base = new turismoRioDBHelper(getBaseContext());
+       // db = base.getWritableDatabase();
+
+        objOperaciones.insertarLugar(new modeloLugar(null,"san antonio","loma de quito","es una iglesia","-094954395","-987859"));
+
+
+
+
+
+
+
+
+
     }
 
     private void ui() {
