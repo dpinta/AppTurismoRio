@@ -1,17 +1,21 @@
 package com.riobamba.appturismorio.ui;
 
+import android.app.ListActivity;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import com.riobamba.appturismorio.model.entity.User;
+import com.riobamba.appturismorio.data.operacionDB;
 import com.riobamba.appturismorio.data.turismoRioDBHelper;
+import com.riobamba.appturismorio.model.entity.User;
 
 import butterknife.Bind;
 
 
-public class MainActivity extends FormActivity {
+public class MainActivity extends ListActivity {
 
     @Bind(R.id.tviUsername)
     TextView tviUsername;
@@ -19,8 +23,11 @@ public class MainActivity extends FormActivity {
     private User user;
     private  turismoRioDBHelper base;
     private Context contexto;
-
     private SQLiteDatabase db;
+private Cursor cursor;
+    private operacionDB objOreacionDb;
+    private ListView lista;
+
 
 
 
@@ -31,14 +38,20 @@ public class MainActivity extends FormActivity {
         setContentView(R.layout.activity_main);
 
         extras();
-        injectView();
+        //injectView();
         ui();
+        lista=(ListView) findViewById(R.id.listView);
+        cursor=objOreacionDb.cursorCargarInformacion("1");
+        startManagingCursor(cursor);
+        lista.setAdapter();
+
+
 
 
     }
 
     private void ui() {
-        tviUsername.setText("Welcome " + user.getFirstname()+" "+user.getLastname());
+
     }
 
     private void extras() {

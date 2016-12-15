@@ -2,6 +2,7 @@ package com.riobamba.appturismorio.data;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.riobamba.appturismorio.model.modeloImagen;
@@ -62,9 +63,18 @@ public final class operacionDB {
         valores.put("pathImagen",imagen.pathImagen);
         valores.put("idLugar",imagen.idLugar.idLugar);
      db.insert("imagenLugar",null,valores);
-
-
     }
+
+public Cursor cursorCargarInformacion(String idLugar)
+{
+    SQLiteDatabase db= base.getReadableDatabase();
+
+    String query= String.format("SELECT * FROM lugar where idLugar = "+idLugar);
+     return db.rawQuery(query,null);
+
+
+
+}
 
 
 

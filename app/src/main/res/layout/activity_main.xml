@@ -8,22 +8,15 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="4dp"
-            android:id="@+id/tviUsername"/>
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:layout_below="@+id/tviUsername"
-            android:src="@mipmap/ic_android"/>
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/listView" />
 
 
 </RelativeLayout>
